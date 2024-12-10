@@ -1,0 +1,54 @@
+{
+    "name": "uniapp-axios-adapter",
+    "version": "0.3.2",
+    "description": "在uni-app项目中使用axios发起请求，可设置拦截器等功能",
+    "main": "lib/index.esm.js",
+    "scripts": {
+        "release": "release-it",
+        "prebuild": "yarn release",
+        "build": "rollup -c && yarn zip",
+        "zip": "zip -r uniapp-axios-adapter.zip lib index.d.ts README.md CHANGELOG.md package.json"
+    },
+    "exports": {
+        ".": {
+            "require": "./lib/index.cjs.js",
+            "import": "./lib/index.esm.js"
+        }
+    },
+    "typings": "index.d.ts",
+    "files": [
+        "lib",
+        "README.md",
+        "CHANGELOG.md",
+        "index.d.ts"
+    ],
+    "keywords": [
+        "axios",
+        "uni-app",
+        "adapter",
+        "request",
+        "请求"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/zxfd/uniapp-axios-adapter"
+    },
+    "author": "zxiaofoo@qq.com",
+    "license": "MIT",
+    "devDependencies": {
+        "@release-it/conventional-changelog": "^5.1.1",
+        "release-it": "^15.5.0",
+        "rollup": "^3.2.5"
+    },
+    "peerDependencies": {
+        "axios": "*"
+    },
+    "id": "zxiaofoo-uniapp-axios-adapter",
+    "displayName": "uniapp-axios-adapter",
+    "dcloudext": {
+        "category": [
+            "JS SDK",
+            "通用 SDK"
+        ]
+    }
+}

@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "打卡",
+        "iconPath": "/static/images/no_sel.png",
+        "selectedIconPath": "/static/images/index.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "记录",
+        "iconPath": "/static/images/Frame.png",
+        "selectedIconPath": "/static/images/Frame9.png"
+      }
+    ],
+    "color": "#909090",
+    "selectedColor": "#F384F4",
+    "backgroundColor": "#000000",
+    "borderStyle": "white",
+    "position": "bottom"
+  },
+  "usingComponents": {}
+}

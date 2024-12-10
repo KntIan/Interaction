@@ -1,0 +1,115 @@
+<template>
+  <view class="box">
+    <view class="title">打卡记录</view>
+    <view class="logs_box" ref="logsBox">
+      <view class="item" v-for="(log, index) in attendanceStore.logs" :key="index" :ref="`item-${index}`">
+        <image class="log-image" :src="log.thumb" mode="" />
+        <text class="product-name">{{ log.content }}</text>
+        <view class="status" :class="{ 'checked-in': log.is_point, 'not-checked-in': !log.is_point }">
+          <image v-if="log.is_point" style="width: 16px; height: 16px;" src="@/static/images/Fram1e.png" mode="aspectFill" />
+          <text>{{ log.is_point ? '已打卡' : '未打卡' }}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<script setup>
+import { ref, onMounted } from 'vue';
+import { getRecordList, getUrlParameter } from '@/utils/api';
+import { useAttendanceStore } from '@/store/store';
+
+const attendanceStore = useAttendanceStore();
+const param = getUrlParameter("param") || uni.getStorageSync("param");
+const logsBox = ref(null);
+
+onMounted(async () => {
+  if (param) {
+    try {
+      uni.setStorageSync("param", param);
+      const response = await getRecordList({ param });
+      attendanceStore.setLogs(response.data || []);
+      // 调用布局函数
+      layoutWaterfall();
+    } catch (error) {
+      uni.showToast({ title: '获取打卡记录失败', icon: 'none' });
+    }
+  }
+});
+
+// Layout function for waterfall
+const layoutWaterfall = () => {
+  const items = logsBox.value.children;
+  const columns = 2; // 设置列数
+  const columnHeights = Array(columns).fill(0); // 存储每列的高度
+
+  Array.from(items).forEach(item => {
+    // 找到当前高度最小的列
+    const columnIndex = columnHeights.indexOf(Math.min(...columnHeights));
+    item.style.gridColumnStart = columnIndex + 1; // 设置列起始
+    columnHeights[columnIndex] += item.offsetHeight; // 更新列高度
+  });
+};
+</script>
+
+<style scoped>
+.box {
+  background: #f7f8fa;
+  min-height: 87vh;
+}
+.title {
+  font-weight: 500;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  padding: 12px 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: #f7f8fa;
+}
+.logs_box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 两列的网格布局 */
+  gap: 10px;
+  padding: 10px;
+  padding-top: 55px;
+}
+.item {
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 92, 185, 0.1);
+  background: #fff;
+}
+.log-image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.product-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 10px;
+  font-weight: bold;
+  color: #333;
+}
+.status {
+  width: 120px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: white;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.checked-in {
+  background: linear-gradient(90deg, #005cb9 0%, #56b7e6 100%);
+}
+.not-checked-in {
+  background-color: #b3b3b3;
+}
+</style>

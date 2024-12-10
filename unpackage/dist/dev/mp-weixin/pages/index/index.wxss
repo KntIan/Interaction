@@ -1,0 +1,45 @@
+
+html.data-v-1cf27b2a,
+body.data-v-1cf27b2a {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* 禁止页面滚动 */
+}
+.content.data-v-1cf27b2a {
+  height: 91.1vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+  background: url("../../static/images/Frame 2219.png") no-repeat center center;
+  background-size: cover;
+}
+.address.data-v-1cf27b2a {
+  background: rgba(0, 0, 0, 0.5);
+  width: 90%;
+  height: 90px;
+  border-radius: 15px;
+  position: fixed;
+  top: 70px;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.punch-button.data-v-1cf27b2a {
+  margin-top: 0.625rem;
+  width: 156px;
+  height: 156px;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  align-items: center;
+  display: grid;
+  justify-items: center;
+}
+.time-text.data-v-1cf27b2a {
+  font-size: 24rpx;
+  margin: 8rpx;
+}

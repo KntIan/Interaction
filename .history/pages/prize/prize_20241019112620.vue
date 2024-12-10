@@ -1,0 +1,22 @@
+<template>
+  <view class="prize_box">
+    <view class="title">奖品</view>
+    <view class="prize_content"></view>
+  </view>
+</template>
+
+<script setup>
+
+</script>
+
+<style scoped>
+.prize_box {
+  background: #f7f8fa;
+  display: flex;
+  justify-content: center;
+}
+.title {
+  font-weight: 500;
+  color: #333333;
+}
+</style>

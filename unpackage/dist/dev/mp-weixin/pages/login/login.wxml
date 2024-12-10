@@ -1,0 +1,1 @@
+<view class="login-container"><text style="font-size:30px;padding:186px 0px 52px;font-weight:bold">登录</text><button bindtap="{{a}}" class="login-button">微信授权登录</button></view>

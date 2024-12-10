@@ -1,0 +1,144 @@
+
+body[data-v-1cf27b2a] {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #f7f8fa;
+}
+.container[data-v-1cf27b2a] {
+  background: #f7f8fa;
+  padding: 20px;
+  padding-top: 0;
+  height: 100vh;
+}
+.info_img[data-v-1cf27b2a] {
+  border-radius: 20px;
+  padding: 50px;
+  height: 260px;
+  background: url(../../static/images/Scan-code.png) no-repeat center;
+}
+.info_text[data-v-1cf27b2a] {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+.status[data-v-1cf27b2a] {
+  width: 140px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checked-in[data-v-1cf27b2a] {
+  background: linear-gradient(90deg, #005cb9 0%, #56b7e6 100%);
+}
+.not-checked-in[data-v-1cf27b2a] {
+  background-color: #b3b3b3;
+}
+
+/* 弹窗 */
+.custom-toast[data-v-1cf27b2a] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.overlay[data-v-1cf27b2a] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.toast-content[data-v-1cf27b2a] {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  margin: 80px 33px;
+}
+.logs_box[data-v-1cf27b2a] {
+  max-height: 450px;
+  overflow-y: auto;
+  gap: 10px;
+  margin-top: 26px;
+  column-count: 2;
+  /* 设置列数为2，形成瀑布流布局 */
+  column-gap: 10px;
+  /* 列之间的间距 */
+  display: flex;
+  /* 使用 Flexbox */
+  flex-wrap: wrap;
+  /* 允许换行 */
+  gap: 10px;
+  /* 设置列间隔 */
+  padding: 10px;
+}
+.item[data-v-1cf27b2a] {
+  flex: 1 1 calc(50% - 10px);
+  /* 设置为两列 */
+  margin-bottom: 10px;
+  /* 每个 item 之间的间距 */
+  border-radius: 20px;
+  transition: transform 0.3s;
+  box-shadow: 0 0 20px rgba(0, 92, 185, 0.1);
+  background: #fff;
+  display: inline-block;
+  /* 使用 inline-block 使得瀑布流效果更流畅 */
+  break-inside: avoid;
+  /* 防止在列内断裂 */
+  width: 100%;
+  /* 宽度设置为100%以适应不同列 */
+  margin-bottom: 10px;
+  border-radius: 20px;
+  transition: transform 0.3s;
+  box-shadow: 0 0 20px rgba(0, 92, 185, 0.1);
+  background: #fff;
+}
+/* 如果是单数个数，最后一个 item 的宽度保持在单列 */
+.item[data-v-1cf27b2a]:last-child {
+  flex: 0 1 calc(50% - 10px); /* 保持最后一个 item 在两列宽度 */
+}
+.logo_tit[data-v-1cf27b2a] {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+}
+.log-image[data-v-1cf27b2a] {
+  width: 100%;
+  height: 135px;
+  border-radius: 20px;
+}
+.product-name[data-v-1cf27b2a] {
+  padding: 10px;
+  text-align: center;
+}
+.footer[data-v-1cf27b2a] {
+  padding: 20px 0;
+  border-radius: 20px;
+}
+.footer uni-button[data-v-1cf27b2a] {
+  width: 100%;
+  height: 44px;
+  background: linear-gradient(90deg, #005cb9 0%, #56b7e6 100%);
+  box-shadow: 0px 8px 10px 0px rgba(2, 118, 255, 0.2);
+  color: white;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+}

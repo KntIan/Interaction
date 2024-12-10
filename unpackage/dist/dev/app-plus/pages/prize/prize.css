@@ -1,0 +1,29 @@
+
+body[data-v-b9fe9831] {
+  overflow: hidden;
+}
+.prize_box[data-v-b9fe9831] {
+  background: #f7f8fa;
+  height: 100vh;
+  text-align: center;
+}
+.title[data-v-b9fe9831] {
+  font-weight: 500;
+  font-size: 16px;
+  color: #333333;
+  line-height: 44px;
+}
+.prize_content[data-v-b9fe9831] {
+  padding: 44px;
+  background: #ffffff;
+  display: grid;
+  justify-items: center;
+  margin: 15px;
+  border-radius: 15px;
+  padding-bottom: 27px;
+}
+.address[data-v-b9fe9831] {
+  background: linear-gradient(0deg, #005cb9 0%, #56b7e6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

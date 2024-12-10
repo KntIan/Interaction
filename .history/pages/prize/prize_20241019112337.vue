@@ -1,0 +1,16 @@
+<template>
+  <view class="prize_box">
+    <view class="title">奖品</view>
+    <view class="prize_content"></view>
+  </view>
+</template>
+
+<script setup>
+
+</script>
+
+<style scoped>
+.prize_box{
+	bac
+}
+</style>

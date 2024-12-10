@@ -1,0 +1,79 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "产品信息"
+			}
+		},
+
+		{
+			"path": "pages/logs/logs",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/information/information",
+			"style": {
+				"navigationBarTitleText": "个人信息",
+				"navigationBarBackgroundColor": "white"
+			}
+		},
+		{
+			"path": "pages/prize/prize",
+			"style": {
+				"navigationBarTitleText": "奖品"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "打卡",
+				"iconPath": "/static/images/daka.png",
+				"selectedIconPath": "/static/images/daka1.png"
+
+			},
+			{
+				"pagePath": "pages/logs/logs",
+				"text": "记录",
+				"iconPath": "/static/images/jilu.png",
+				"selectedIconPath": "/static/images/jilu1.png"
+			},
+			{
+				"pagePath": "pages/prize/prize",
+				"text": "奖品",
+				"iconPath": "/static/images/jiangpin.png",
+				"selectedIconPath": "/static/images/jiangpin1.png"
+			},
+			{
+				"pagePath": "pages/logs/logs",
+				"text": "我的",
+				"iconPath": "/static/images/wode_1.png",
+				"selectedIconPath": "/static/images/wode1.png"
+			}
+		],
+		"color": "#666666",
+		"height": "83px",
+		"selectedColor": "#005CB9",
+		"backgroundColor": "#ffffff",
+		"borderStyle": "white",
+		"position": "bottom"
+	},
+	"uniIdRouter": {}
+}
